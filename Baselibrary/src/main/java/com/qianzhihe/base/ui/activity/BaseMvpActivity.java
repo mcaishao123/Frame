@@ -6,9 +6,12 @@ import android.support.annotation.Nullable;
 import com.qianzhihe.base.presenter.BasePresenter;
 import com.qianzhihe.base.presenter.view.BaseView;
 
+import javax.inject.Inject;
+
 
 public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActivity implements BaseView {
 
+    @Inject
     private T mPresenter;
 
     @Override
