@@ -24,7 +24,6 @@ public class RetrofitFactory {
             synchronized (RetrofitFactory.class) {
                 if (instance == null) {
                     instance = new RetrofitFactory();
-
                 }
             }
         }
