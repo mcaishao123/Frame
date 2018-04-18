@@ -3,7 +3,7 @@ package com.qianzhihe.base.presenter.view;
 /*
    MVP中视图回调 基类
 */
-public interface BaseView {
+public interface IBaseView {
 
     void showLoading();
 
