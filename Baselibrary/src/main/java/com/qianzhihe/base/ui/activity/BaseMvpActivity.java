@@ -2,7 +2,6 @@ package com.qianzhihe.base.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.widget.Button;
 
 import com.qianzhihe.base.injection.component.DaggerActivityComponent;
 import com.qianzhihe.base.injection.module.LifecycleProviderModule;
