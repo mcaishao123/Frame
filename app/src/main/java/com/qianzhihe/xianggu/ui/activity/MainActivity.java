@@ -2,10 +2,10 @@ package com.qianzhihe.xianggu.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.orhanobut.logger.Logger;
 import com.qianzhihe.provider.router.RouterPath;
 import com.qianzhihe.xianggu.R;
 
@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab)
     public void onViewClicked() {
-        Log.e("MainActivity", "onViewClicked: ");
+        Logger.e("hello");
+        Logger.d("hello");
         ARouter.getInstance().build(RouterPath.LOGIN_PATH).navigation();
     }
 }

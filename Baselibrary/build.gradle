@@ -84,4 +84,8 @@ dependencies {
     api "com.jakewharton:butterknife:$butterknife_version"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
 
+    //Logger
+    api "com.orhanobut:logger:$logger_version"
+
+
 }

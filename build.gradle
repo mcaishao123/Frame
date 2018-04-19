@@ -30,6 +30,8 @@ buildscript {
 
     ext.butterknife_version = '8.8.1'
 
+    ext.logger_version = '2.2.0'
+
     repositories {
         google()
         jcenter()

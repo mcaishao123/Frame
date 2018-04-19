@@ -3,6 +3,8 @@ package com.qianzhihe.base.common;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 import com.qianzhihe.base.BuildConfig;
 
 
@@ -19,6 +21,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         context = this;
         initARouter();
+        initLogger();
 
     }
 
@@ -29,4 +32,14 @@ public class BaseApplication extends Application {
         }
         ARouter.init(this);
     }
+
+    private void initLogger() {
+        Logger.addLogAdapter(new AndroidLogAdapter() {
+            @Override
+            public boolean isLoggable(int priority, String tag) {
+                return !BuildConfig.ISDEBUG;
+            }
+        });
+    }
+
 }
