@@ -1,17 +1,27 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tools_version
+
     defaultConfig {
-        applicationId "com.qianzhihe.xianggu"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode version_code
+        versionName version_name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //JNI
         externalNativeBuild {
             cmake {
                 cppFlags ""
+            }
+        }
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -26,9 +36,20 @@ android {
             path "CMakeLists.txt"
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':Provider')
+    api project(':Provider')
+
+    //butterknife
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+    //ARouter
+    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
+
+    //Dagger
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
 }
