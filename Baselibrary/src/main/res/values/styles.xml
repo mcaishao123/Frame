@@ -12,7 +12,7 @@
     </style>
 
     <!-- 通用列表样式-->
-    <style name="commonRecyclerView">
+    <style name="CommonRecyclerView">
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -20,21 +20,21 @@
     </style>
 
     <!-- 横向分隔线 -->
-    <style name="DividerFixedHeight">
+    <style name="HorizontalDivider">
         <item name="android:background">@color/common_divider</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/common_divider</item>
     </style>
 
     <!-- 竖向分隔线 -->
-    <style name="DividerFixedWidth">
+    <style name="VerticalDivider">
         <item name="android:background">@color/common_divider</item>
         <item name="android:layout_width">@dimen/common_divider</item>
         <item name="android:layout_height">match_parent</item>
     </style>
 
     <!-- 竖向分隔线 带上下间距 -->
-    <style name="DividerFixedWidth.MarginTopBottom" parent="@style/DividerFixedWidth">
+    <style name="DividerFixedWidth.MarginTopBottom" parent="@style/VerticalDivider">
         <item name="android:layout_marginTop">@dimen/common_margin_m</item>
         <item name="android:layout_marginBottom">@dimen/common_margin_m</item>
     </style>

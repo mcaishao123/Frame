@@ -42,13 +42,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api project(':Provider')
+    api project(':UserCenter')
 
     //butterknife
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
-
     //ARouter
     annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
-
     //Dagger
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
 

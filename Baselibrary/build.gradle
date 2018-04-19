@@ -14,12 +14,6 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        //ARouter
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
-            }
-        }
     }
 
     compileOptions {
@@ -29,12 +23,12 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "boolean", "ISDEBUG", "false"
+            buildConfigField "boolean", "ISDEBUG", "true"
             minifyEnabled false
         }
 
         release {
-            buildConfigField "boolean", "ISDEBUG", "true"
+            buildConfigField "boolean", "ISDEBUG", "false"
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -78,7 +72,6 @@ dependencies {
 
     //ARouter
     api "com.alibaba:arouter-api:$arouter_api_version"
-    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
 
     //ButterKnife
     api "com.jakewharton:butterknife:$butterknife_version"

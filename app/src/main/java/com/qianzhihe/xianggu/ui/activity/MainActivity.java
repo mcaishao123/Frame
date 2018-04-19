@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.orhanobut.logger.Logger;
 import com.qianzhihe.provider.router.RouterPath;
@@ -23,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        ARouter.getInstance().build(RouterPath.LOGIN_PATH).navigation();
+
     }
 
     @OnClick(R.id.fab)
     public void onViewClicked() {
-        Logger.e("hello");
         Logger.d("hello");
-        ARouter.getInstance().build(RouterPath.LOGIN_PATH).navigation();
     }
 }

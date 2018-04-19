@@ -3,4 +3,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="phone">手机号码</string>
     <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="register">注册</string>
+    <string name="login_in_other_ways">其它方式登录</string>
 </resources>

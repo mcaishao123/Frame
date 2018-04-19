@@ -20,9 +20,17 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
-        initARouter();
         initLogger();
+        initARouter();
+    }
 
+    private void initLogger() {
+        Logger.addLogAdapter(new AndroidLogAdapter() {
+            @Override
+            public boolean isLoggable(int priority, String tag) {
+                return BuildConfig.ISDEBUG;
+            }
+        });
     }
 
     private void initARouter() {
@@ -33,13 +41,5 @@ public class BaseApplication extends Application {
         ARouter.init(this);
     }
 
-    private void initLogger() {
-        Logger.addLogAdapter(new AndroidLogAdapter() {
-            @Override
-            public boolean isLoggable(int priority, String tag) {
-                return !BuildConfig.ISDEBUG;
-            }
-        });
-    }
 
 }

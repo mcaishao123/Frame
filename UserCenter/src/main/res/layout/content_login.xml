@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MatchMatch.Common"
+    android:padding="@dimen/common_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.qianzhihe.user.ui.activity.LoginActivity"
     tools:showIn="@layout/activity_login">
@@ -11,50 +12,136 @@
         style="@style/WrapWrap"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="@dimen/common_margin"
         android:background="@drawable/ic_login_close"
         android:contentDescription="@null" />
 
     <ImageView
         style="@style/WrapWrap"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/img_logo"
+        android:layout_above="@+id/loginLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/common_margin_l"
         android:contentDescription="@null"
         android:src="@drawable/ic_login_close" />
 
     <LinearLayout
-        style="@style/MatchWrap"
+        android:id="@+id/loginLayout"
+        style="@style/MatchWrap.Vertical"
         android:layout_centerInParent="true"
-        android:layout_margin="@dimen/common_margin">
+        android:padding="@dimen/common_margin_s">
 
         <android.support.v7.widget.LinearLayoutCompat
             style="@style/MatchWrap.Vertical"
             android:background="@drawable/border_corner_all"
-            app:divider="@dimen/common_divider">
+            app:divider="@drawable/divider"
+            app:showDividers="middle">
 
             <EditText
-                style="@style/MatchWrap"
-                android:background="@android:color/transparent"
-                android:hint="@string/phone"
-                android:layout_marginTop="@dimen/common_margin"
-                android:layout_marginStart="@dimen/common_margin"
-                android:layout_marginEnd="@dimen/common_margin"
-                android:layout_marginBottom="@dimen/common_margin_m"
-                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_line_height"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_login_account"
+                android:paddingStart="@dimen/common_padding"
+                android:drawablePadding="@dimen/common_padding"
                 android:drawableStart="@drawable/ic_login_account"
-                android:drawableLeft="@drawable/ic_login_account" />
+                android:hint="@string/phone"
+                android:inputType="number"
+                android:textSize="@dimen/text_size"
+                android:paddingLeft="@dimen/common_padding" />
 
             <EditText
-                style="@style/MatchWrap"
-                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_line_height"
+                android:background="@null"
+                android:paddingStart="@dimen/common_padding"
                 android:drawableLeft="@drawable/ic_login_password"
+                android:drawablePadding="@dimen/common_padding"
                 android:drawableStart="@drawable/ic_login_password"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:layout_marginTop="@dimen/common_margin_m"
-                android:layout_marginStart="@dimen/common_margin"
-                android:layout_marginEnd="@dimen/common_margin"
-                android:layout_marginBottom="@dimen/common_margin"/>
+                android:textSize="@dimen/text_size"
+                android:paddingLeft="@dimen/common_padding" />
+
         </android.support.v7.widget.LinearLayoutCompat>
+
+        <Button
+            style="@style/MatchWrap"
+            android:background="@color/common_blue"
+            android:layout_marginTop="@dimen/common_margin_m"
+            android:text="@string/login"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_size_l" />
+
+        <RelativeLayout
+            style="@style/MatchWrap.Horizontal"
+            android:layout_marginTop="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:text="@string/forget_password"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/register"
+                android:textSize="@dimen/text_size" />
+        </RelativeLayout>
+
     </LinearLayout>
+
+    <LinearLayout
+        style="@style/MatchWrap.Horizontal"
+        android:gravity="center"
+        android:layout_above="@+id/thirdLoginLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/common_margin">
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_width="@dimen/horizontal_divider"/>
+
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin"
+            android:text="@string/login_in_other_ways"
+            android:textSize="@dimen/text_size"/>
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_width="@dimen/horizontal_divider"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdLoginLayout"
+        style="@style/MatchWrap.Horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="@dimen/ic_third_login"
+            android:layout_height="@dimen/ic_third_login"
+            android:background="@drawable/ic_phone"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:layout_width="@dimen/ic_third_login"
+            android:layout_height="@dimen/ic_third_login"
+            android:layout_marginEnd="@dimen/common_margin_l"
+            android:layout_marginStart="@dimen/common_margin_l"
+            android:background="@drawable/ic_wechat"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:layout_width="@dimen/ic_third_login"
+            android:layout_height="@dimen/ic_third_login"
+            android:background="@drawable/ic_sina"
+            android:contentDescription="@null" />
+
+    </LinearLayout>
+
 </RelativeLayout>
