@@ -47,7 +47,8 @@
                 android:hint="@string/phone"
                 android:inputType="number"
                 android:textSize="@dimen/text_size"
-                android:paddingLeft="@dimen/common_padding" />
+                android:paddingLeft="@dimen/common_padding"
+                tools:ignore="RtlSymmetry"/>
 
             <EditText
                 android:layout_width="match_parent"
