@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Baselibrary/Baselibrary.iml" filepath="$PROJECT_DIR$/Baselibrary/Baselibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVPFrame-c.iml" filepath="$PROJECT_DIR$/MVPFrame-c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Microblog/Microblog.iml" filepath="$PROJECT_DIR$/Microblog/Microblog.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider/Provider.iml" filepath="$PROJECT_DIR$/Provider/Provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserCenter/UserCenter.iml" filepath="$PROJECT_DIR$/UserCenter/UserCenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XiangGu.iml" filepath="$PROJECT_DIR$/XiangGu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
