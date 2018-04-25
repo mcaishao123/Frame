@@ -32,6 +32,10 @@ buildscript {
 
     ext.logger_version = '2.2.0'
 
+    ext.circle_imageview_version = '2.2.0'
+
+    ext.permissions_dispatcher_version = '3.2.0'
+
     repositories {
         google()
         jcenter()
@@ -52,6 +56,10 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+
+        //动态权限
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+
     }
 }
 
