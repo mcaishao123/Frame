@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".ui.activity.MicroblogActivity"
+            android:name=".ui.activity.MicroBlogActivity"
             android:label="@string/title_activity_microblog">
         </activity>
     </application>

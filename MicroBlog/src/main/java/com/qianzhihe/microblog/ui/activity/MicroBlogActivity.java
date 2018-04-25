@@ -5,7 +5,7 @@ import android.app.Activity;
 
 import com.qianzhihe.microblog.R;
 
-public class MicroblogActivity extends Activity {
+public class MicroBlogActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
